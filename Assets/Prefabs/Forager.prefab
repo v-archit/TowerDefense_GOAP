@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1776893547382863415}
   - component: {fileID: 1776893547382863416}
   - component: {fileID: 1776893547382863417}
-  - component: {fileID: 1776893547382863418}
+  - component: {fileID: 1908704245}
   m_Layer: 0
   m_Name: Forager
   m_TagString: Untagged
@@ -128,7 +128,7 @@ MonoBehaviour:
   shrubObject: {fileID: 0}
   manager: {fileID: 0}
   takeDuration: 3
---- !u!114 &1776893547382863418
+--- !u!114 &1908704245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1776893547382863420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab01a18b6edc4c4198bee9c99776096, type: 3}
+  m_Script: {fileID: 11500000, guid: a118e7a77524fc342b3b0570ebe47643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activityObject: {fileID: 0}
