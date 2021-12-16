@@ -10,6 +10,7 @@ public class BattleUnit : MonoBehaviour
 	public int attackToTower;
 
 	private bool inCombat = false;
+	private Manager manager;
 
 	public string type;
 
@@ -18,6 +19,7 @@ public class BattleUnit : MonoBehaviour
 	private void Start()
 	{
 		//type = "Seige";
+		manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<Manager>();
 
 		if (gameObject.tag == "Player")
 		{
@@ -154,6 +156,8 @@ public class BattleUnit : MonoBehaviour
 
 			if (other.GetComponent<BattleUnit>().health < 0)
 			{
+				manager.UpdateKilled(other.tag, other.GetComponent<BattleUnit>().type);
+				Debug.Log("Killed: " + other.tag + other.GetComponent<BattleUnit>().type);
 				Destroy(other);
 				inCombat = false;
 			}
@@ -186,6 +190,8 @@ public class BattleUnit : MonoBehaviour
 
 			if (other.GetComponent<BattleUnit>().health < 0)
 			{
+				manager.UpdateKilled(other.tag, other.GetComponent<BattleUnit>().type);
+				Debug.Log("Killed: " + other.tag + other.GetComponent<BattleUnit>().type);
 				Destroy(other);
 				inCombat = false;
 			}
@@ -196,6 +202,6 @@ public class BattleUnit : MonoBehaviour
 		yield break;
 	}
 
-
+	
 
 }

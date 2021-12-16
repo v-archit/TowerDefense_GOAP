@@ -203,10 +203,45 @@ public class Manager : MonoBehaviour
 	public void KillPlayerForager()
 	{
 		Destroy(foragersPlayer[0]);
+		playerForager -= 1;
+		playerPopulation -= 1;
 	}
 	
 	public void KillPlayerWoodCutter()
 	{
 		Destroy(woodCuttersPlayer[0]);
+		playerSiege -= 1;
+		playerPopulation -= 1;
+	}
+
+	public void UpdateKilled(string s, string u)
+	{
+		if (s == "AI")
+		{
+			if (u == "Combat")
+			{
+				nCombat -= 1;
+				population -= 1;
+			}
+			else if (u == "Siege")
+			{
+				nSiege -= 1;
+				population -= 1;
+			}
+
+		}
+		else if (s == "Player")
+		{
+			if (u == "Combat")
+			{
+				playerCombat -= 1;
+				playerPopulation -= 1;
+			}
+			else if (u == "Siege")
+			{
+				playerSiege -= 1;
+				playerPopulation -= 1;
+			}
+		}
 	}
 }
