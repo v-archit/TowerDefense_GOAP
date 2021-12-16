@@ -28,7 +28,7 @@ public class BattleUnit : MonoBehaviour
 			direction = -Vector3.right;
 		}
 
-		if (type == "Seige")
+		if (type == "Siege")
 		{
 			health = 100;
 			attackToSeige = 10;
@@ -53,7 +53,7 @@ public class BattleUnit : MonoBehaviour
 
 		if (!inCombat)
 		{
-			if (this.type == "Seige")
+			if (this.type == "Siege")
 			{
 				transform.Translate(direction * Time.deltaTime * 0.2f);
 			}
@@ -135,7 +135,7 @@ public class BattleUnit : MonoBehaviour
 		while (inCombat)
 		{
 			Debug.Log("Inside combat Player");
-			if (other.GetComponent<BattleUnit>().type == "Seige")
+			if (other.GetComponent<BattleUnit>().type == "Siege")
 			{
 				other.GetComponent<BattleUnit>().health -= attackToSeige;
 			}
@@ -167,7 +167,7 @@ public class BattleUnit : MonoBehaviour
 		{
 			Debug.Log("Inside combat AI");
 
-			if (other.GetComponent<BattleUnit>().type == "Seige")
+			if (other.GetComponent<BattleUnit>().type == "Siege")
 			{
 				other.GetComponent<BattleUnit>().health -= attackToSeige;
 			}
