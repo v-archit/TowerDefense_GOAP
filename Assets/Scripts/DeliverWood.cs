@@ -13,20 +13,7 @@ public class DeliverWood : ActivityClass
     
     public float deliveryDuration = 1;
 
-    //public CookFood()
-    //{
-    //    AddRequiredStates("hasIngredients", true);
-    //    AddRequiredStates("hasFood", false);
-    //    AddChangedStates("hasIngredients", false);
-    //    AddChangedStates("hasFood", true);
-    //    Debug.Log("Activity Object set");
-
-
-    //    activityObject = kitchenObject;
-
-
-
-    //}
+    public string type;
 
     private void Start()
     {
@@ -75,8 +62,14 @@ public class DeliverWood : ActivityClass
 
         deliveredFood = true;
 
-        manager.inventoryWood += 4;
-        //manager.isFoodOrdered = false;
+        if (type == "AI")
+        {
+            manager.inventoryWood += 4;
+        }
+        else
+        {
+            manager.playerWood += 4;
+        }
 
         Debug.Log("Wood is delivered");
 

@@ -12,20 +12,8 @@ public class GetFood : ActivityClass
 
     public float takeDuration = 3;
 
-    //public CookFood()
-    //{
-    //    AddRequiredStates("hasIngredients", true);
-    //    AddRequiredStates("hasFood", false);
-    //    AddChangedStates("hasIngredients", false);
-    //    AddChangedStates("hasFood", true);
-    //    Debug.Log("Activity Object set");
-
-
-    //    activityObject = kitchenObject;
-
-
-
-    //}
+    public string type;
+    
 
     private void Start()
     {
@@ -72,7 +60,16 @@ public class GetFood : ActivityClass
 
 
         takenFood = true;
-        manager.foragedFood += 3;
+
+        if (type == "AI")
+        {
+            manager.foragedFood += 3;
+        }
+        else
+        {
+
+        }
+
         //manager.foodForDelivery += 3;
         Debug.Log("Food is taken");
 

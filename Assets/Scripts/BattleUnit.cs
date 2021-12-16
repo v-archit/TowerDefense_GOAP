@@ -42,6 +42,10 @@ public class BattleUnit : MonoBehaviour
 			attackToCombat = 10;
 			attackToTower = 5;
 		}
+		else if (type == "Tower")
+		{
+			health = 200;
+		}
 	}
 
 	private void Update()

@@ -12,20 +12,7 @@ public class GetWood : ActivityClass
 
     public float takeDuration = 4;
 
-    //public CookFood()
-    //{
-    //    AddRequiredStates("hasIngredients", true);
-    //    AddRequiredStates("hasFood", false);
-    //    AddChangedStates("hasIngredients", false);
-    //    AddChangedStates("hasFood", true);
-    //    Debug.Log("Activity Object set");
-
-
-    //    activityObject = kitchenObject;
-
-
-
-    //}
+    public string type;
 
     private void Start()
     {
@@ -72,7 +59,14 @@ public class GetWood : ActivityClass
 
 
         takenFood = true;
-        manager.cutWood += 4;
+        if (type == "AI")
+        {
+            manager.cutWood += 4;
+        }
+        else
+        {
+            
+        }
         //manager.foodForDelivery += 3;
         Debug.Log("Wood is taken");
 

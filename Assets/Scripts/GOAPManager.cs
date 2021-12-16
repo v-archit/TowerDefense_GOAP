@@ -104,7 +104,7 @@ public class GOAPManager : MonoBehaviour
 		ActivityClass[] activities = gameObject.GetComponents<ActivityClass>();
 		foreach (ActivityClass activity in activities)
 		{
-			//Debug.Log("Activity name " + activity);
+			Debug.Log("Activity name " + activity);
 			activitiesList.Add(activity);
 		}
 		//Debug.Log("Found Activities");

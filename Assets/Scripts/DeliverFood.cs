@@ -13,20 +13,7 @@ public class DeliverFood : ActivityClass
     
     public float deliveryDuration = 1;
 
-    //public CookFood()
-    //{
-    //    AddRequiredStates("hasIngredients", true);
-    //    AddRequiredStates("hasFood", false);
-    //    AddChangedStates("hasIngredients", false);
-    //    AddChangedStates("hasFood", true);
-    //    Debug.Log("Activity Object set");
-
-
-    //    activityObject = kitchenObject;
-
-
-
-    //}
+    public string type;
 
     private void Start()
     {
@@ -75,8 +62,14 @@ public class DeliverFood : ActivityClass
 
         deliveredFood = true;
 
-        manager.inventoryFood += 3;
-        //manager.isFoodOrdered = false;
+        if (type == "AI")
+        {
+            manager.inventoryFood += 3;
+        }
+        else
+        {
+            manager.playerFood += 3;
+        }
 
         Debug.Log("Food is delivered");
 

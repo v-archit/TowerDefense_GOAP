@@ -55,6 +55,7 @@ public class SpawnSiegePerson : ActivityClass
         int p = manager.PriorityLane();
         GameObject g = Instantiate(siegePrefab);
         g.transform.position = spawnPoints[p - 1].position;
+        g.tag = "AI";
         manager.AddWeightLane(p);
 
 

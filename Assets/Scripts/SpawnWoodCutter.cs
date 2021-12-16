@@ -51,6 +51,9 @@ public class SpawnWoodCutter : ActivityClass
 
         GameObject g = Instantiate(cutterPrefab);
         g.transform.position = spawnPoint.position;
+        g.GetComponent<GetWood>().type = "AI";
+        g.GetComponent<DeliverWood>().type = "AI";
+        g.SetActive(true);
 
         manager.AddWoodCutter(g);
 

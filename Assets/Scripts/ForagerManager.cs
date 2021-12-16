@@ -17,6 +17,8 @@ public class ForagerManager : MonoBehaviour
 	private bool startedMoving = false;
 	private bool startedActivity = false;
 
+	//public string type;
+
 	private void Start()
 	{
 		activitiesList = new List<ActivityClass>();

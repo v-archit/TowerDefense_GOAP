@@ -21,6 +21,7 @@ public class SpawnCombatPerson : ActivityClass
         AddRequiredStates("isCutterPresent", true);
         AddRequiredStates("isForagerPresent", true);
         AddRequiredStates("isSpaceAvailable", true);
+        AddRequiredStates("defendTower", false);
 
 
         AddChangedStates("defendTower", true);
@@ -55,6 +56,7 @@ public class SpawnCombatPerson : ActivityClass
         int p = manager.PriorityLane();
         GameObject g = Instantiate(combatPrefab);
         g.transform.position = spawnPoints[p-1].position;
+        g.tag = "AI";
         manager.AddWeightLane(p);
 
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1646758342732453706}
   m_Layer: 0
   m_Name: SeigePerson
-  m_TagString: Player
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,4 +128,4 @@ MonoBehaviour:
   attackToSeige: 0
   attackToCombat: 0
   attackToTower: 0
-  type: Seige
+  type: Siege

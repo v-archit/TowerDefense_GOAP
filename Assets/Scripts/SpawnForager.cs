@@ -50,13 +50,15 @@ public class SpawnForager : ActivityClass
 
         GameObject g = Instantiate(foragerPrefab);
         g.transform.position = spawnPoint.position;
+        g.GetComponent<GetFood>().type = "AI";
+        g.GetComponent<DeliverFood>().type = "AI";
+        g.SetActive(true);
 
         manager.AddForager(g);
 
         spawnedForager = true;
 
         manager.inventoryFood -= 2;
-        manager.inventoryWood -= 1;
 
         manager.nForager += 1;
         manager.population += 1;
